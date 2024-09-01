@@ -3,7 +3,34 @@
 using namespace std;
 
 int main(){
-    //create a queue
+    //deque STL 
+    deque<int> d;
+    d.push_front(5);
+    d.push_back(8);
+     d.push_back(8);
+      d.push_back(8);
+    cout<<d.front()<<endl;
+    cout<<d.back() <<endl;
+
+    // d.pop_front();
+
+    cout<<d.front()<<endl;
+    cout<<d.back() <<endl;
+    d.pop_back();
+    if(d.empty()){
+        cout<< "queue is empty "<<endl;
+    }
+    else{
+        cout<<" not empty"<<endl;
+    }
+   cout<< d.front();
+    
+   
+
+
+
+ /*
+    //create a queue  : queue STL
     queue<int>q;
     q.push(4);
     cout<<"front of queue is: "<<q.front()<<endl;
@@ -30,6 +57,8 @@ int main(){
     }
 
     cout<<q.back();
+
+    */
 
     
 
