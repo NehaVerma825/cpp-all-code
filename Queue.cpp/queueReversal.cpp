@@ -3,9 +3,10 @@
 #include<stack>
 using namespace std;
 
-//queue reversal using recursion
+//queue reversal using recursion 
+//TC= O(n), SC= O(n) if we consider the function call stack else O(1).
 
-void reverseUsingStack(queue < int > & q) {
+void reverseUsingRecursion(queue < int > & q) {
     if (q.empty()) {
         // If the queue is empty, return.
         return;
@@ -16,14 +17,14 @@ void reverseUsingStack(queue < int > & q) {
     q.pop();
 
     // Recursively call for the rest of the queue.
-    reverseUsingStack(q);
+    reverseUsingRecursion(q);
 
     // Push back the stored element.
     q.push(element);
 }
 
 
-// Queue reversal using stack
+// Queue reversal using stack   -TC= O(n) , SC= O(n)
 queue<int> revUsingStack(queue<int>& q) {
     stack<int> s;
     
@@ -68,7 +69,7 @@ int main() {
     //revUsingStack(q);
 
     //Reversing the queue using stack
-    reverseUsingStack(q);
+    reverseUsingRecursion(q);
 
 
 
