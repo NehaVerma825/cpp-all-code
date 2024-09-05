@@ -30,7 +30,7 @@ vector<long long> printFirstNegativeInteger(long long int A[],
         if(A[i]<0){
             dq.push_back(i);
         }
-        
+         
         
         //ans store
         if(dq.size()>0){
