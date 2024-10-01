@@ -1,4 +1,6 @@
 #include<iostream>
+#include<vector>
+#include<deque>
 using namespace std;
 
 vector<long long> printFirstNegativeInteger(long long int A[],
@@ -16,12 +18,13 @@ vector<long long> printFirstNegativeInteger(long long int A[],
     //stor ans of first K size window
     if(dq.size()>0){
         ans.push_back(A[dq.front()]);
-        
+         
     }
     else{
         ans.push_back(0);
     }
-    //process for remaining window
+
+    //process for remaining windows 
     for(int i = K; i<N; i++){
         //removal
         if(! dq.empty() && i- dq.front()>=K){
@@ -45,10 +48,23 @@ vector<long long> printFirstNegativeInteger(long long int A[],
                                                  
  }
 
-int main(){
+int main() {
+    long long int A[] = {-8, 2, 3, -6, 10};
+    long long int N = sizeof(A) / sizeof(A[0]);
+    long long int K = 2;
 
+    vector<long long> result = printFirstNegativeInteger(A, N, K);
 
+    // Print the result
+    cout << "First negative integers for each window of size " << K << ": ";
+    // for(long long num : result) {
+    //     cout << num << " ";
+    // }
+    for(int i = 0; i < result.size(); i++) {
+    cout << result[i] << " ";
+    }
 
+    cout << endl;
 
     return 0;
 }
