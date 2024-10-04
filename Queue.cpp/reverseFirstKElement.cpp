@@ -3,6 +3,8 @@
 #include <stack>
 using namespace std;
 
+//TC: O(n)& SC : O(n)
+
 // Function to reverse first k elements of a queue.
 queue<int> modifyQueue(queue<int> q, int k) {
     // Step 1: Pop first k elements from Q and put into the stack
