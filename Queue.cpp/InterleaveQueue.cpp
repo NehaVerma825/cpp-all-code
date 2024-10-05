@@ -3,6 +3,9 @@
 #include<queue>
 using namespace std;
 
+//Time Complexity: O(n)
+//Space Complexity: O(n)
+
 void interleaveQueue(queue<int> &q){
     stack<int> s;
     int n= q.size();
@@ -44,7 +47,7 @@ void interleaveQueue(queue<int> &q){
 int main() {
     queue<int> q;
 
-    // Initialize the queue with example values
+    // Initialize the queue 
     q.push(1);
     q.push(2);
     q.push(3);
