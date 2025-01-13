@@ -1,7 +1,8 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 
-oid solve(string ans, string output, int index, vector<string>& nums) {
+void solve(string ans, string output, int index, vector<string>& nums) {
     // base case -> solving using recursion
     if (index >= ans.size()) {
 		if(output.length()>0){

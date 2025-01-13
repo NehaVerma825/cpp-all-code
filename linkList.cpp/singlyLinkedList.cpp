@@ -64,6 +64,7 @@ void InsertAtPostion(Node* &tail, Node* &head, int position ,int d){
      temp->next= NodeToInsert;
 
 }
+
 void print(Node * &head){
     Node *temp = head;
     while(temp!=NULL){
@@ -74,7 +75,7 @@ void print(Node * &head){
 }
 
 
-void deleteNode(int position ,Node* & head){
+void deleteNode(int position ,Node* & head ,Node* &tail){
     //deleting first or starting node
     if(position == 1){
         Node* temp = head;
@@ -93,6 +94,11 @@ void deleteNode(int position ,Node* & head){
             prev=current;
             current= current->next;
             count++;
+        }
+
+        // If the current node is the last node, update the tail
+        if (current->next == NULL) {
+            tail = prev;
         }
         prev ->next= current->next;
         current->next= NULL;

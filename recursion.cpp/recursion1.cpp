@@ -2,23 +2,23 @@
 #include<math.h>
 using namespace std;
 
-int powerOf2(int n){
-  //base case
-  if(n==0){
-    return 1;
+  int powerOf2(int n){  //space and time complexity = O(n)
+    //base case
+    if(n==0){
+      return 1;
+    }
+    return 2*powerOf2(n-1);
+
   }
-  return 2*powerOf2(n-1);
-
-}
-
-int factorial (int n){
+  
+int factorial (int n){   //space and time complexity = O(n)
     if(n==1 || n==0){
         return 1;
     }
     return n * factorial(n-1);
 }
 
-void printCounting(int n){
+void printCounting(int n){   //space and time complexity = O(n)
   if(n==0){ //base case
     return;
   }
